@@ -72,6 +72,39 @@ paths:
                     type: integer
                   code:
                     type: integer
+
+  "/api/v1/articles":
+    get:
+      summary: get article list
+      responses:
+        '200':
+          description: current article list
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: string
+                  code:
+                    type: integer
+
+  "/api/v1/articles/<pk>":
+    get:
+      summary: get article detail
+      responses:
+        '200':
+          description:  article detail
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: object
+
+
+
 components:
   schemas:
     CommonResponse: # common response which has data and code properties
@@ -134,3 +167,9 @@ components:
           minimum: 1
         name:
           type: string
+
+    ArticleListForm:
+      type: object
+      properties:
+        id:
+          type:string
