@@ -13,6 +13,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_('email address'), unique=True)
     phone = models.CharField(_('phone'), max_length=30, blank=True, unique=True, null=True)
     nickname = models.CharField(_('nickname'), max_length=150, blank=True)
+
+    user_img = models.CharField(max_length=255, verbose_name='头像', default='')
+    wx_num = models.CharField(max_length=50, verbose_name='微信号', default='')
+    school = models.CharField(max_length=255, verbose_name='学校', default='')
+    major = models.CharField(max_length=255, verbose_name='专业', default='')
+    gs = models.CharField(max_length=255, verbose_name='公司', default='')
+    zw = models.CharField(max_length=255, verbose_name='职位', default='')
+
+
     is_active = models.BooleanField(
         _('active'),
         default=True,

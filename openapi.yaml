@@ -21,6 +21,54 @@ paths:
                     $ref: "#/components/schemas/User"
                   code:
                     type: integer
+
+  "/api/v1/me/add":
+          post:
+            summary: add current user's profile
+            responses:
+              '200':
+                description: current user
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      properties:
+                        data:
+                          $ref: "#/components/schemas/User"
+                        code:
+                          type: integer
+  "/api/v1/me/delete":
+	    post:
+	      summary: delete current user's profile
+	      responses:
+	        '200':
+	          description: current user
+	          content:
+	            application/json:
+	              schema:
+	                type: object
+	                properties:
+	                  data:
+	                    $ref: "#/components/schemas/User"
+	                  code:
+	                    type: integer
+  "/api/v1/me/update":
+            post:
+              summary: add current user's profile
+              responses:
+                '200':
+                  description: current user
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          data:
+                            $ref: "#/components/schemas/User"
+                          code:
+                            type: integer
+
+
   "/api/v1/login":
     options:
       summary: get csrf token
@@ -142,6 +190,18 @@ components:
         phone:
           type: string
         nickname:
+          type: string
+        use_img:
+          type: string
+        wx_num:
+          type: string
+        school:
+          type: string
+        major:
+          type: string
+        gs:
+          type: string
+        zw:
           type: string
         date_joined:
           type: string

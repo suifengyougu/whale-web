@@ -124,3 +124,12 @@ def register(request):
     user.save()
     django_login(request, user)
     return Response({"data": UserSerializer(user).data, "code": 0}, status=status.HTTP_201_CREATED)
+
+def add_user_info():
+    pass
+
+def del_user_info():
+    pass
+
+def update_user_info():
+    pass
