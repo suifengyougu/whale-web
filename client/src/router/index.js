@@ -42,6 +42,11 @@ const routes = [
         component: () => import('../views/Subscribes.vue'),
       },
       {
+        path: 'whocome',
+        name: 'whocome',
+        component: () => import('../views/whocome.vue'),
+      },
+      {
         path: 'login',
         name: 'login',
         // route level code-splitting

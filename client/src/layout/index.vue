@@ -20,6 +20,12 @@
         <v-icon>mdi-table-heart</v-icon>
         关注
       </v-btn>
+
+      <v-btn plain to="/whocome">
+        <v-icon>mdi-account-clock</v-icon>
+        最近来访用户
+      </v-btn>
+
       <v-spacer></v-spacer>
       <v-btn icon to="/articles/editor/add" v-show="isAuthenticated">
         <v-icon>mdi-book-plus</v-icon>
